@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ExternalLink, Twitter, Send, BarChart2, Shield, Rocket, Wallet, Coins, ChevronUp, Loader2, ChevronDown, Download } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const Marquee = ({ text }) => (
