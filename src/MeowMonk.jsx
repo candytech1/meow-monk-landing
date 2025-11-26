@@ -234,31 +234,36 @@ const MeowMonk = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+        {/* Enhanced background effects */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-[150px] animate-pulse"></div>
+        <div className="absolute top-20 right-1/4 w-80 h-80 bg-purple-500/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[400px] bg-gradient-to-t from-orange-500/10 to-transparent rounded-full blur-3xl"></div>
+
         <div className="max-w-5xl mx-auto text-center relative z-10">
 
           {/* Hype Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-bold mb-8 animate-fade-in-up hover:bg-orange-500/20 transition-colors cursor-pointer">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-orange-500/20 to-amber-500/20 border-2 border-orange-500/30 text-orange-400 text-sm font-bold mb-8 animate-fade-in-up hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20 transition-all cursor-pointer group">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
             </span>
-            NEXT 1000X GEM 💎
+            <span className="group-hover:text-orange-300 transition-colors">NEXT 1000X GEM 💎</span>
           </div>
 
           {/* Main Title */}
           <h1 className="text-6xl md:text-9xl font-bold mb-6 font-['Fredoka'] leading-none tracking-tight drop-shadow-2xl">
-            <span className="block text-white">
+            <span className="block text-white hover:scale-105 transition-transform inline-block">
               FIND ZEN.
             </span>
-            <span className="block text-gradient-gold animate-pulse">
+            <span className="block bg-gradient-to-r from-orange-400 via-amber-400 to-orange-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform inline-block">
               GET RICH.
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
+          <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
             The only monk that meditates on green candles. <br />
-            <span className="text-orange-400 font-bold">Don't fade the fade.</span> Become one with the pump. 🧘‍♂️🚀
+            <span className="text-orange-400 font-bold hover:text-orange-300 transition-colors">Don't fade the fade.</span> Become one with the pump. 🧘‍♂️🚀
           </p>
 
           {/* Buttons */}
@@ -310,9 +315,6 @@ const MeowMonk = () => {
         </div>
       </section>
 
-      {/* Marquee */}
-      <Marquee text="PUMP IT • HODL • 1000X SOON • ZEN MODE • MOON MISSION •" />
-
       {/* Stats Section */}
       <section className="py-16 border-y border-white/5 bg-black/20">
         <div className="max-w-7xl mx-auto px-4">
@@ -333,65 +335,74 @@ const MeowMonk = () => {
         </div>
       </section>
 
+      {/* Marquee */}
+      <Marquee text="PUMP IT • HODL • 1000X SOON • ZEN MODE • MOON MISSION •" />
+
       {/* Meet the Monk - Profile Image Section */}
       <section className="py-32 px-4 relative overflow-hidden">
-        <div className="max-w-5xl mx-auto">
+        {/* Enhanced background */}
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-orange-500/10 rounded-full blur-[150px] animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+
+        <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-bold mb-6 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-orange-500/20 to-amber-500/20 border-2 border-orange-500/30 text-orange-400 text-sm font-bold mb-6 animate-fade-in-up hover:scale-105 transition-transform shadow-lg shadow-orange-500/10">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
               </span>
               THE LEGEND HIMSELF
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 font-['Fredoka'] text-gradient-gold">
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 font-['Fredoka'] bg-gradient-to-r from-orange-400 via-amber-400 to-orange-400 bg-clip-text text-transparent hover:scale-105 transition-transform inline-block">
               Meet the Monk 🐱
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
               The most zen cat on Solana. The most based monk in crypto.
             </p>
           </div>
 
           {/* Profile Image */}
           <div className="relative w-80 h-80 mx-auto mb-16 animate-float">
-            <div className="absolute inset-0 bg-gradient-to-b from-orange-500 to-purple-600 rounded-full blur-[100px] opacity-60 animate-pulse"></div>
-            <div className="relative w-full h-full rounded-full border-4 border-orange-500/30 overflow-hidden shadow-2xl bg-[#1a1a1a] group">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500 via-amber-500 to-purple-600 rounded-full blur-[120px] opacity-70 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-green-500 to-transparent rounded-full blur-[100px] opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <div className="relative w-full h-full rounded-full border-4 border-orange-500/40 overflow-hidden shadow-2xl shadow-orange-500/20 bg-[#1a1a1a] group hover:border-orange-400/60 transition-all duration-500">
               <img
                 src="/assets/meow-monk-profile.png"
                 alt="Meow Monk"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
             </div>
 
-            {/* Floating Elements */}
-            <div className="absolute -right-20 top-10 glass-panel p-5 rounded-2xl animate-bounce rotate-12 shadow-xl" style={{ animationDuration: '3s' }}>
+            {/* Floating Elements - Enhanced */}
+            <div className="absolute -right-20 top-10 glass-panel p-5 rounded-2xl animate-bounce rotate-12 shadow-xl shadow-orange-500/20 hover:scale-110 transition-transform border border-orange-500/20" style={{ animationDuration: '3s' }}>
               <span className="text-5xl">💰</span>
             </div>
-            <div className="absolute -left-20 bottom-20 glass-panel p-5 rounded-2xl animate-bounce -rotate-12 shadow-xl" style={{ animationDuration: '4s' }}>
+            <div className="absolute -left-20 bottom-20 glass-panel p-5 rounded-2xl animate-bounce -rotate-12 shadow-xl shadow-green-500/20 hover:scale-110 transition-transform border border-green-500/20" style={{ animationDuration: '4s' }}>
               <span className="text-5xl">📈</span>
             </div>
-            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 glass-panel p-4 rounded-2xl animate-bounce shadow-xl" style={{ animationDuration: '3.5s' }}>
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 glass-panel p-4 rounded-2xl animate-bounce shadow-xl shadow-purple-500/20 hover:scale-110 transition-transform border border-purple-500/20" style={{ animationDuration: '3.5s' }}>
               <span className="text-4xl">🧘‍♂️</span>
             </div>
           </div>
 
-          {/* Quick Stats */}
+          {/* Quick Stats - Enhanced */}
           <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <div className="glass-panel p-6 rounded-2xl text-center hover:bg-white/5 transition-all group border border-white/10">
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🏯</div>
-              <div className="text-2xl font-black text-white mb-1 font-['Fredoka']">Temple Cat</div>
-              <div className="text-sm text-gray-400">Born in Korea</div>
+            <div className="glass-panel p-6 rounded-2xl text-center hover:bg-gradient-to-br hover:from-orange-500/10 hover:to-transparent transition-all group border border-white/10 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 duration-300">
+              <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">🏯</div>
+              <div className="text-2xl font-black text-white mb-1 font-['Fredoka'] group-hover:text-orange-400 transition-colors">Temple Cat</div>
+              <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Born in Korea</div>
             </div>
-            <div className="glass-panel p-6 rounded-2xl text-center hover:bg-white/5 transition-all group border border-white/10">
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">⛩️</div>
-              <div className="text-2xl font-black text-white mb-1 font-['Fredoka']">解脱</div>
-              <div className="text-sm text-gray-400">Jietuo = Liberation</div>
+            <div className="glass-panel p-6 rounded-2xl text-center hover:bg-gradient-to-br hover:from-purple-500/10 hover:to-transparent transition-all group border border-white/10 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1 duration-300">
+              <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">⛩️</div>
+              <div className="text-2xl font-black text-white mb-1 font-['Fredoka'] group-hover:text-purple-400 transition-colors">解脱</div>
+              <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Jietuo = Liberation</div>
             </div>
-            <div className="glass-panel p-6 rounded-2xl text-center hover:bg-white/5 transition-all group border border-white/10">
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">💎</div>
-              <div className="text-2xl font-black text-white mb-1 font-['Fredoka']">Diamond Paws</div>
-              <div className="text-sm text-gray-400">Never Sells</div>
+            <div className="glass-panel p-6 rounded-2xl text-center hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-transparent transition-all group border border-white/10 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1 duration-300">
+              <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">💎</div>
+              <div className="text-2xl font-black text-white mb-1 font-['Fredoka'] group-hover:text-blue-400 transition-colors">Diamond Paws</div>
+              <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Never Sells</div>
             </div>
           </div>
         </div>
@@ -561,110 +572,60 @@ const MeowMonk = () => {
         </div>
       </section>
 
-      {/* The Teaching Section */}
-      <section className="py-32 px-4 bg-white/5 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 relative animate-float">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-3xl blur-2xl opacity-20"></div>
-              <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <img
-                  src="/assets/the-teaching.png"
-                  alt="The Teaching"
-                  className="w-full h-auto hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f13] via-transparent to-transparent opacity-60"></div>
-              </div>
+      {/* Join the Monastery - Simple & Cute */}
+      <section className="py-32 px-4 relative overflow-hidden">
+        {/* Cute background elements */}
+        <div className="absolute top-10 left-10 text-6xl opacity-10 animate-bounce" style={{ animationDuration: '3s' }}>🏯</div>
+        <div className="absolute top-20 right-20 text-5xl opacity-10 animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}>🐱</div>
+        <div className="absolute bottom-20 left-1/4 text-7xl opacity-10 animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '1s' }}>🧘‍♂️</div>
+        <div className="absolute bottom-10 right-1/3 text-5xl opacity-10 animate-bounce" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }}>⛩️</div>
+
+        <div className="max-w-3xl mx-auto text-center relative z-10">
+          <div className="mb-12">
+            <div className="text-8xl mb-8 animate-bounce inline-block">🏯</div>
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 font-['Fredoka'] bg-gradient-to-r from-orange-400 via-amber-400 to-orange-400 bg-clip-text text-transparent">
+              Join the Monastery
+            </h2>
+            <p className="text-2xl text-gray-400 mb-8 font-light">
+              Where degens find enlightenment 🧘‍♂️✨
+            </p>
+          </div>
+
+          {/* Cute decorative elements */}
+          <div className="flex justify-center gap-6 mb-12 flex-wrap">
+            <div className="glass-panel p-6 rounded-3xl hover:scale-110 transition-transform duration-300 cursor-pointer group">
+              <div className="text-5xl mb-2 group-hover:scale-125 transition-transform">🐱</div>
+              <div className="text-sm text-gray-400 font-medium">Zen Cats</div>
             </div>
+            <div className="glass-panel p-6 rounded-3xl hover:scale-110 transition-transform duration-300 cursor-pointer group">
+              <div className="text-5xl mb-2 group-hover:scale-125 transition-transform">💎</div>
+              <div className="text-sm text-gray-400 font-medium">Diamond Paws</div>
+            </div>
+            <div className="glass-panel p-6 rounded-3xl hover:scale-110 transition-transform duration-300 cursor-pointer group">
+              <div className="text-5xl mb-2 group-hover:scale-125 transition-transform">🚀</div>
+              <div className="text-sm text-gray-400 font-medium">Moon Bound</div>
+            </div>
+            <div className="glass-panel p-6 rounded-3xl hover:scale-110 transition-transform duration-300 cursor-pointer group">
+              <div className="text-5xl mb-2 group-hover:scale-125 transition-transform">🧘‍♂️</div>
+              <div className="text-sm text-gray-400 font-medium">Inner Peace</div>
+            </div>
+          </div>
 
-            <div className="order-1 md:order-2 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-widest mb-6">
-                <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
-                The Final Lesson
-              </div>
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 font-['Fredoka'] leading-tight">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                  Beyond the Charts.
-                </span>
-              </h2>
-              <p className="text-xl text-gray-400 mb-8 leading-relaxed font-light">
-                The Monk teaches us that true wealth is not found in the pump, but in the <span className="text-white font-medium">unshakeable belief</span> of the community.
-              </p>
-              <p className="text-lg text-gray-500 mb-8 leading-relaxed">
-                "When the candles are red, we meditate. When the candles are green, we meditate.
-                The price moves, but the Monk remains still."
-              </p>
-
-              <div className="flex gap-4">
-                <div className="glass-panel p-4 rounded-2xl flex-1 text-center hover:bg-white/5 transition-colors cursor-help">
-                  <div className="text-3xl mb-2">🧘‍♂️</div>
-                  <div className="font-bold text-white">HODL</div>
-                </div>
-                <div className="glass-panel p-4 rounded-2xl flex-1 text-center hover:bg-white/5 transition-colors cursor-help">
-                  <div className="text-3xl mb-2">💎</div>
-                  <div className="font-bold text-white">Hands</div>
-                </div>
-                <div className="glass-panel p-4 rounded-2xl flex-1 text-center hover:bg-white/5 transition-colors cursor-help">
-                  <div className="text-3xl mb-2">🚀</div>
-                  <div className="font-bold text-white">Moon</div>
-                </div>
-              </div>
+          {/* Simple message */}
+          <div className="glass-panel p-10 rounded-3xl border-2 border-orange-500/20 bg-gradient-to-br from-orange-500/5 to-purple-500/5 hover:border-orange-500/40 transition-all duration-500 group">
+            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-6 font-light">
+              Welcome to a place where <span className="text-orange-400 font-bold">meditation meets speculation</span>,
+              where <span className="text-purple-400 font-bold">zen vibes</span> flow through every transaction,
+              and where <span className="text-green-400 font-bold">diamond hands</span> find their true calling.
+            </p>
+            <div className="flex justify-center gap-3 text-4xl">
+              <span className="hover:scale-125 transition-transform cursor-pointer">🙏</span>
+              <span className="hover:scale-125 transition-transform cursor-pointer">💚</span>
+              <span className="hover:scale-125 transition-transform cursor-pointer">🌟</span>
             </div>
           </div>
         </div>
-      </section >
-
-
-
-      {/* Community Section */}
-      < section className="py-24 px-4 relative overflow-hidden" >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 font-['Fredoka']">Join the Monastery 🏯</h2>
-            <p className="text-xl text-gray-400">Where degens find enlightenment.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {[
-              { icon: <Users className="w-12 h-12" />, label: "Community Members", value: "10,000+", color: "from-blue-500 to-cyan-500" },
-              { icon: <MessageCircle className="w-12 h-12" />, label: "Daily Messages", value: "50K+", color: "from-purple-500 to-pink-500" },
-              { icon: <TrendingUp className="w-12 h-12" />, label: "ATH Incoming", value: "SOON™", color: "from-orange-500 to-red-500" }
-            ].map((stat, i) => (
-              <div key={i} className="glass-panel p-8 rounded-3xl text-center group hover:-translate-y-2 transition-all duration-300">
-                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${stat.color} mb-4 group-hover:scale-110 transition-transform`}>
-                  {stat.icon}
-                </div>
-                <div className="text-4xl font-black text-white mb-2 font-['Fredoka']">{stat.value}</div>
-                <div className="text-gray-400 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <a href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener noreferrer" className="glass-panel p-8 rounded-3xl flex items-center gap-6 hover:bg-white/5 transition-all group border border-white/10 hover:border-blue-500/50">
-              <div className="bg-[#229ED9] p-4 rounded-2xl group-hover:scale-110 transition-transform">
-                <Send className="w-8 h-8 text-white" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-white mb-2">Telegram</h3>
-                <p className="text-gray-400">Join the most zen community on Solana</p>
-              </div>
-              <ExternalLink className="w-6 h-6 text-gray-500 group-hover:text-blue-400 transition-colors" />
-            </a>
-
-            <a href="https://twitter.com/YOUR_TWITTER" target="_blank" rel="noopener noreferrer" className="glass-panel p-8 rounded-3xl flex items-center gap-6 hover:bg-white/5 transition-all group border border-white/10 hover:border-blue-400/50">
-              <div className="bg-[#1DA1F2] p-4 rounded-2xl group-hover:scale-110 transition-transform">
-                <Twitter className="w-8 h-8 text-white" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-white mb-2">Twitter</h3>
-                <p className="text-gray-400">Follow for memes and alpha</p>
-              </div>
-              <ExternalLink className="w-6 h-6 text-gray-500 group-hover:text-blue-400 transition-colors" />
-            </a>
-          </div>
-        </div>
-      </section >
+      </section>
 
       {/* FAQ Section */}
       < section className="py-24 px-4 bg-white/5" >
@@ -700,32 +661,132 @@ const MeowMonk = () => {
       </section >
 
       {/* Chart Section */}
-      < section id="chart" className="py-20 px-4" >
-        <div className="max-w-7xl mx-auto">
-          <div className="glass-panel p-6 rounded-3xl border border-white/10 shadow-2xl">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold flex items-center gap-3 font-['Fredoka']">
-                <BarChart2 className="text-green-500 w-8 h-8" />
-                Live Market Data
-              </h2>
-              <div className="flex gap-3 items-center bg-green-500/10 px-4 py-2 rounded-full border border-green-500/20">
-                <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
-                <span className="text-sm text-green-400 font-bold">PUMPING NOW</span>
+      <section id="chart" className="py-20 px-4 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-gradient-to-b from-green-500/5 via-transparent to-transparent pointer-events-none"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="glass-panel p-8 rounded-3xl border border-green-500/20 shadow-2xl relative overflow-hidden">
+            {/* Animated gradient border effect */}
+            <div className="absolute -inset-[1px] bg-gradient-to-r from-green-500 via-emerald-500 to-green-500 rounded-3xl opacity-20 blur-sm animate-pulse"></div>
+
+            <div className="relative z-10">
+              <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+                <h2 className="text-3xl md:text-4xl font-bold flex items-center gap-3 font-['Fredoka']">
+                  <BarChart2 className="text-green-500 w-8 h-8 animate-pulse" />
+                  <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                    Live Market Data
+                  </span>
+                </h2>
+                <div className="flex gap-3 items-center bg-gradient-to-r from-orange-500/20 to-amber-500/20 px-6 py-3 rounded-full border-2 border-orange-500/30 shadow-lg">
+                  <Loader2 className="w-4 h-4 text-orange-400 animate-spin" />
+                  <span className="text-sm text-orange-400 font-bold tracking-wider">COMING SOON</span>
+                </div>
               </div>
-            </div>
-            <div className="w-full h-[600px] rounded-2xl overflow-hidden bg-[#111] border border-white/5 relative">
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <span className="text-white/5 text-9xl font-black rotate-45 select-none">PUMP IT</span>
+
+              <div className="w-full h-[600px] rounded-2xl overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#111] to-[#0a0a0a] border-2 border-green-500/10 relative group">
+                {/* Coming Soon Overlay */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black/60 backdrop-blur-sm">
+                  <div className="text-center space-y-6 p-8">
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 blur-3xl opacity-30 animate-pulse"></div>
+                      <h3 className="text-6xl md:text-8xl font-black font-['Fredoka'] bg-gradient-to-r from-green-400 via-emerald-400 to-green-400 bg-clip-text text-transparent relative animate-pulse">
+                        COMING SOON
+                      </h3>
+                    </div>
+                    <p className="text-xl md:text-2xl text-gray-300 font-medium">
+                      Live charts will appear here once $MONK launches! 🚀
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4 mt-8">
+                      <div className="glass-panel px-6 py-3 rounded-full border border-green-500/30">
+                        <span className="text-green-400 font-bold">📈 Real-time Price</span>
+                      </div>
+                      <div className="glass-panel px-6 py-3 rounded-full border border-emerald-500/30">
+                        <span className="text-emerald-400 font-bold">💹 Volume Tracking</span>
+                      </div>
+                      <div className="glass-panel px-6 py-3 rounded-full border border-green-500/30">
+                        <span className="text-green-400 font-bold">🔥 Market Stats</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Background pattern */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+                  <span className="text-white text-9xl font-black rotate-12 select-none">📊</span>
+                </div>
+
+                {/* Placeholder iframe (hidden) */}
+                <iframe
+                  src={`https://pump.fun/coin/${CA}?embed=1&theme=dark`}
+                  className="w-full h-full border-0 relative opacity-0"
+                  title="Chart"
+                />
               </div>
-              <iframe
-                src={`https://pump.fun/coin/${CA}?embed=1&theme=dark`}
-                className="w-full h-full border-0 relative z-10"
-                title="Chart"
-              />
             </div>
           </div>
         </div>
-      </section >
+      </section>
+
+      {/* Beyond the Charts - Final Section */}
+      <section className="py-32 px-4 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent relative overflow-hidden">
+        {/* Magical background effects */}
+        <div className="absolute top-1/4 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-[150px] animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 relative animate-float">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-3xl opacity-30 animate-pulse"></div>
+              <div className="relative rounded-3xl overflow-hidden border-2 border-purple-500/20 shadow-2xl shadow-purple-500/20 hover:border-purple-500/40 transition-all duration-500 group">
+                <img
+                  src="/assets/the-teaching.png"
+                  alt="Beyond the Charts"
+                  className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f13] via-transparent to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            </div>
+
+            <div className="order-1 md:order-2 text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-2 border-purple-500/30 text-purple-400 text-xs font-bold uppercase tracking-widest mb-6 hover:scale-105 transition-transform shadow-lg shadow-purple-500/10">
+                <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+                The Final Lesson
+              </div>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 font-['Fredoka'] leading-tight">
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform inline-block">
+                  Beyond the Charts.
+                </span>
+              </h2>
+              <p className="text-xl text-gray-400 mb-8 leading-relaxed font-light">
+                The Monk teaches us that true wealth is not found in the pump, but in the <span className="text-white font-medium">unshakeable belief</span> of the community.
+              </p>
+              <p className="text-lg text-gray-500 mb-8 leading-relaxed italic">
+                "When the candles are red, we meditate. When the candles are green, we meditate.
+                The price moves, but the Monk remains still."
+              </p>
+
+              <div className="flex gap-4">
+                <div className="glass-panel p-6 rounded-2xl flex-1 text-center hover:bg-gradient-to-br hover:from-purple-500/10 hover:to-transparent transition-all group border border-white/10 hover:border-purple-500/30 hover:-translate-y-1 duration-300">
+                  <div className="text-4xl mb-2 group-hover:scale-125 transition-transform duration-300">🧘‍♂️</div>
+                  <div className="font-bold text-white group-hover:text-purple-400 transition-colors">HODL</div>
+                </div>
+                <div className="glass-panel p-6 rounded-2xl flex-1 text-center hover:bg-gradient-to-br hover:from-pink-500/10 hover:to-transparent transition-all group border border-white/10 hover:border-pink-500/30 hover:-translate-y-1 duration-300">
+                  <div className="text-4xl mb-2 group-hover:scale-125 transition-transform duration-300">💎</div>
+                  <div className="font-bold text-white group-hover:text-pink-400 transition-colors">Hands</div>
+                </div>
+                <div className="glass-panel p-6 rounded-2xl flex-1 text-center hover:bg-gradient-to-br hover:from-purple-500/10 hover:to-transparent transition-all group border border-white/10 hover:border-purple-500/30 hover:-translate-y-1 duration-300">
+                  <div className="text-4xl mb-2 group-hover:scale-125 transition-transform duration-300">🚀</div>
+                  <div className="font-bold text-white group-hover:text-purple-400 transition-colors">Moon</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       < footer className="py-12 px-4 border-t border-white/5 bg-black/40" >
