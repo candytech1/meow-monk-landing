@@ -22,50 +22,7 @@ const Marquee = ({ text, speed = 20 }) => (
   </div>
 );
 
-const BuyNotification = () => {
-  const [notification, setNotification] = useState(null);
-  const names = ["Chad", "Degen", "Whale", "Ape", "Monk"];
-  const actions = ["bought", "aped in", "swept floor", "grabbed bag"];
 
-  useEffect(() => {
-    const showNotification = () => {
-      const randomSol = (Math.random() * 5 + 0.1).toFixed(2);
-      const randomName = names[Math.floor(Math.random() * names.length)];
-      const randomAction = actions[Math.floor(Math.random() * actions.length)];
-
-      setNotification({
-        text: `${randomName} ${randomAction} ${randomSol} SOL!`,
-        amount: randomSol
-      });
-
-      setTimeout(() => setNotification(null), 4000);
-    };
-
-    const interval = setInterval(showNotification, Math.random() * 5000 + 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <AnimatePresence>
-      {notification && (
-        <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -100, opacity: 0 }}
-          className="fixed bottom-6 left-6 z-50 glass-panel p-4 rounded-xl border-l-4 border-green-500 flex items-center gap-3 shadow-2xl max-w-xs"
-        >
-          <div className="bg-green-500/20 p-2 rounded-full">
-            <Rocket className="w-5 h-5 text-green-400" />
-          </div>
-          <div>
-            <div className="text-xs text-gray-400 font-bold uppercase">New Transaction</div>
-            <div className="text-sm font-bold text-white">{notification.text}</div>
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -270,19 +227,11 @@ const MeowMonk = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
             <button
               disabled={!isLaunched}
-              className="group relative px-10 py-5 bg-gradient-to-r from-gray-600 to-gray-700 rounded-full font-black text-xl shadow-xl transition-all flex items-center gap-3 border-2 border-white/10 cursor-not-allowed opacity-60"
+              className="group relative px-8 py-4 bg-gradient-to-r from-gray-600 to-gray-700 rounded-full font-black text-lg shadow-xl transition-all flex items-center gap-2.5 border-2 border-white/10 cursor-not-allowed opacity-60"
             >
-              <Shield className="w-6 h-6 text-white" />
+              <Shield className="w-5 h-5 text-white" />
               <span>LAUNCHING SOON</span>
               <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-bold animate-pulse">🔒 LOCKED</div>
-            </button>
-
-            <button
-              disabled={!isLaunched}
-              className="px-10 py-5 bg-gray-600 rounded-full font-bold text-xl transition-all flex items-center gap-3 shadow-lg cursor-not-allowed opacity-60"
-            >
-              <Send className="w-6 h-6 text-white" />
-              <span>COMING SOON</span>
             </button>
           </div>
 
@@ -820,7 +769,6 @@ const MeowMonk = () => {
           </p>
         </div>
       </footer >
-      <BuyNotification />
       <ScrollToTop />
     </div >
   );
