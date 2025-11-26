@@ -247,14 +247,6 @@ const MeowMonk = () => {
               <div className="bg-gray-600 p-3 rounded-full text-white shadow-lg">
                 <Shield className="w-5 h-5" />
               </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-orange-500/90 backdrop-blur-sm px-6 py-2 rounded-full border-2 border-white/20">
-                  <p className="text-white font-black text-sm flex items-center gap-2">
-                    <Shield className="w-4 h-4" />
-                    LAUNCHING SOON
-                  </p>
-                </div>
-              </div>
             </div>
             <p className="text-xs text-center text-gray-500 mt-3">
               🔒 Contract will be revealed at launch
