@@ -722,6 +722,19 @@ const MeowMonk = () => {
         </div>
       </section>
 
+      {/* Closing Section */}
+      <section className="py-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/5 to-transparent"></div>
+        <div className="max-w-3xl mx-auto text-center relative z-10">
+          <p className="text-3xl md:text-5xl font-bold text-white mb-4 font-['Fredoka'] leading-relaxed">
+            Find your zen. <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">Hold your $MONK.</span>
+          </p>
+          <p className="text-lg text-gray-400">
+            The journey to enlightenment begins with a single trade. 🐱✨
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       < footer className="py-12 px-4 border-t border-white/5 bg-black/40" >
         <div className="max-w-4xl mx-auto text-center">
