@@ -1,9 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
-import { Copy, Check, ExternalLink, Twitter, Send, BarChart2, Shield, Flame, Zap, Rocket, Wallet, Coins, ArrowRight, Map, Calculator, ChevronUp, Loader2, ChevronDown, Users, MessageCircle, TrendingUp } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ExternalLink, Twitter, Send, BarChart2, Shield, Rocket, Wallet, Coins, ChevronUp, Loader2, ChevronDown } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
-const Marquee = ({ text, speed = 20 }) => (
+const Marquee = ({ text }) => (
   <div className="relative flex overflow-x-hidden bg-orange-500/10 border-y border-orange-500/20 py-3 backdrop-blur-sm">
     <div className="animate-marquee whitespace-nowrap flex gap-8 text-orange-400 font-bold font-['Fredoka'] uppercase tracking-widest">
       {Array(10).fill(text).map((t, i) => (
@@ -96,11 +96,8 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const MeowMonk = () => {
-  const [copied, setCopied] = useState(false);
   const [walletConnected, setWalletConnected] = useState(false);
   const [isConnecting, setIsConnecting] = useState(false);
-  const [monkAmount, setMonkAmount] = useState(1000000);
-  const [targetPrice, setTargetPrice] = useState(1.00);
   const isLaunched = false; // Set to true when launched
   const CA = "LAUNCHING_SOON"; // Replace with actual CA when launched
 
@@ -124,18 +121,6 @@ const MeowMonk = () => {
       window.twttr.widgets.load();
     }
   }, []);
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(CA);
-    setCopied(true);
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ['#ff9f1c', '#ffffff', '#b5179e']
-    });
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   return (
     <div className="min-h-screen bg-[#0f0f13] text-white overflow-hidden selection:bg-orange-500 selection:text-white font-['Outfit']">
