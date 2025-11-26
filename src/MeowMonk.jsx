@@ -426,32 +426,62 @@ const MeowMonk = () => {
         </div>
       </section>
 
-      {/* How to Buy Section */}
-      <section id="how-to-buy" className="py-24 px-4">
-        <div className="max-w-7xl mx-auto">
+      {/* Sticker Section */}
+      <section id="stickers" className="py-24 px-4 relative overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[150px] animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 font-['Fredoka']">Path to Enlightenment 🧘‍♂️</h2>
-            <p className="text-xl text-gray-400">Follow these steps to attain financial nirvana.</p>
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-2 border-purple-500/30 text-purple-400 text-sm font-bold mb-8 animate-fade-in-up hover:scale-105 transition-transform shadow-lg shadow-purple-500/10">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+              </span>
+              SHARE THE ZEN
+            </div>
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 font-['Fredoka'] bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform inline-block">
+              Meow Monk Stickers 🐱✨
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              Spread the zen vibes with our exclusive sticker collection!
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { step: "01", title: "Create Wallet", desc: "Download Phantom or Solflare wallet.", icon: <Wallet className="w-8 h-8" /> },
-              { step: "02", title: "Get SOL", desc: "Buy SOL from an exchange and send to wallet.", icon: <Coins className="w-8 h-8" /> },
-              { step: "03", title: "Go to Pump.fun", desc: "Connect your wallet to Pump.fun.", icon: <ExternalLink className="w-8 h-8" /> },
-              { step: "04", title: "Buy $MONK", desc: "Swap SOL for $MONK and hold forever.", icon: <Rocket className="w-8 h-8" /> }
-            ].map((item, i) => (
-              <div key={i} className="glass-panel p-8 rounded-3xl relative group hover:-translate-y-2 transition-transform duration-300">
-                <div className="absolute -top-6 left-8 text-6xl font-black text-white/5 font-['Fredoka'] group-hover:text-orange-500/20 transition-colors">
-                  {item.step}
+          {/* Sticker Preview Grid */}
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mb-12 max-w-5xl mx-auto">
+            {Array.from({ length: 15 }, (_, i) => (
+              <div
+                key={i}
+                className="aspect-square glass-panel p-3 rounded-2xl hover:scale-110 transition-all duration-300 group border border-white/10 hover:border-purple-500/30 cursor-pointer"
+              >
+                <div className="w-full h-full bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl overflow-hidden relative group-hover:from-purple-500/20 group-hover:to-pink-500/20 transition-all">
+                  <img
+                    src={`/assets/sticker${i + 1}.png`}
+                    alt={`Sticker ${i + 1}`}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.src = '/assets/meow-monk-profile.png';
+                    }}
+                  />
                 </div>
-                <div className="mb-6 text-orange-400 group-hover:scale-110 transition-transform duration-300 inline-block">
-                  {item.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>
-                <p className="text-gray-400">{item.desc}</p>
               </div>
             ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center">
+            <Link
+              to="/stickers"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full font-black text-xl shadow-2xl hover:shadow-purple-500/50 transition-all transform hover:-translate-y-1 hover:scale-105 border-2 border-white/20"
+            >
+              <Download className="w-6 h-6" />
+              <span>View All Stickers</span>
+              <Rocket className="w-6 h-6" />
+            </Link>
+            <p className="text-sm text-gray-500 mt-4">
+              Download and share with your fellow monks! 🧘‍♂️
+            </p>
           </div>
         </div>
       </section>
@@ -704,66 +734,6 @@ const MeowMonk = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sticker Section */}
-      <section className="py-24 px-4 relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[150px] animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-2 border-purple-500/30 text-purple-400 text-sm font-bold mb-8 animate-fade-in-up hover:scale-105 transition-transform shadow-lg shadow-purple-500/10">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
-              </span>
-              SHARE THE ZEN
-            </div>
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 font-['Fredoka'] bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform inline-block">
-              Meow Monk Stickers 🐱✨
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Spread the zen vibes with our exclusive sticker collection!
-            </p>
-          </div>
-
-          {/* Sticker Preview Grid */}
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mb-12 max-w-5xl mx-auto">
-            {Array.from({ length: 15 }, (_, i) => (
-              <div
-                key={i}
-                className="aspect-square glass-panel p-3 rounded-2xl hover:scale-110 transition-all duration-300 group border border-white/10 hover:border-purple-500/30 cursor-pointer"
-              >
-                <div className="w-full h-full bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl overflow-hidden relative group-hover:from-purple-500/20 group-hover:to-pink-500/20 transition-all">
-                  <img
-                    src={`/assets/sticker${i + 1}.png`}
-                    alt={`Sticker ${i + 1}`}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.src = '/assets/meow-monk-profile.png';
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="text-center">
-            <Link
-              to="/stickers"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full font-black text-xl shadow-2xl hover:shadow-purple-500/50 transition-all transform hover:-translate-y-1 hover:scale-105 border-2 border-white/20"
-            >
-              <Download className="w-6 h-6" />
-              <span>View All Stickers</span>
-              <Rocket className="w-6 h-6" />
-            </Link>
-            <p className="text-sm text-gray-500 mt-4">
-              Download and share with your fellow monks! 🧘‍♂️
-            </p>
           </div>
         </div>
       </section>
