@@ -346,12 +346,14 @@ const MeowMonk = () => {
 
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-orange-500/20 to-amber-500/20 border-2 border-orange-500/30 text-orange-400 text-sm font-bold mb-6 animate-fade-in-up hover:scale-105 transition-transform shadow-lg shadow-orange-500/10">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-              </span>
-              THE LEGEND HIMSELF
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-orange-500/30 to-amber-500/30 border-2 border-orange-500/50 text-orange-300 text-base font-bold animate-fade-in-up hover:scale-105 transition-all duration-300 shadow-xl shadow-orange-500/20 backdrop-blur-sm">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+                </span>
+                THE LEGEND HIMSELF
+              </div>
             </div>
             <h2 className="text-5xl md:text-7xl font-bold mb-6 font-['Fredoka'] bg-gradient-to-r from-orange-400 via-amber-400 to-orange-400 bg-clip-text text-transparent hover:scale-105 transition-transform inline-block">
               Meet the Monk 🐱
