@@ -151,7 +151,7 @@ const MeowMonk = () => {
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
             <a href="#shrine" className="hover:text-orange-400 transition-colors">Shrine</a>
-            <a href="#how-to-buy" className="hover:text-orange-400 transition-colors">How to Buy</a>
+            <a href="#stickers" className="hover:text-orange-400 transition-colors">Stickers</a>
             <a href="#story" className="hover:text-orange-400 transition-colors">Story</a>
             <a href="#roadmap" className="hover:text-orange-400 transition-colors">Prophecy</a>
           </div>
