@@ -419,15 +419,6 @@ const MeowMonk = () => {
                 </div>
               </div>
             </div>
-
-            <div className="glass-panel p-8 rounded-3xl bg-gradient-to-br from-orange-500/10 to-purple-500/10 border-2 border-orange-500/30 shadow-xl">
-              <p className="text-center text-xl md:text-2xl font-bold text-white mb-2 font-['Fredoka']">
-                "She followed every rule."
-              </p>
-              <p className="text-center text-gray-400 italic">
-                A true monk. A legend. An inspiration.
-              </p>
-            </div>
           </div>
 
           {/* Bottom CTA */}
