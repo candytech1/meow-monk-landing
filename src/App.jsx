@@ -1,9 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MeowMonk from './MeowMonk';
+import Stickers from './Stickers';
 import './index.css';
 
 function App() {
-  return <MeowMonk />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MeowMonk />} />
+        <Route path="/stickers" element={<Stickers />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

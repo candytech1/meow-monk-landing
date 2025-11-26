@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { ExternalLink, Twitter, Send, BarChart2, Shield, Rocket, Wallet, Coins, ChevronUp, Loader2, ChevronDown } from 'lucide-react';
+import { ExternalLink, Twitter, Send, BarChart2, Shield, Rocket, Wallet, Coins, ChevronUp, Loader2, ChevronDown, Download } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Marquee = ({ text }) => (
   <div className="relative flex overflow-x-hidden bg-orange-500/10 border-y border-orange-500/20 py-3 backdrop-blur-sm">
@@ -703,6 +704,66 @@ const MeowMonk = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sticker Section */}
+      <section className="py-24 px-4 relative overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[150px] animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-2 border-purple-500/30 text-purple-400 text-sm font-bold mb-8 animate-fade-in-up hover:scale-105 transition-transform shadow-lg shadow-purple-500/10">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+              </span>
+              SHARE THE ZEN
+            </div>
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 font-['Fredoka'] bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform inline-block">
+              Meow Monk Stickers 🐱✨
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              Spread the zen vibes with our exclusive sticker collection!
+            </p>
+          </div>
+
+          {/* Sticker Preview Grid */}
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mb-12 max-w-5xl mx-auto">
+            {Array.from({ length: 15 }, (_, i) => (
+              <div
+                key={i}
+                className="aspect-square glass-panel p-3 rounded-2xl hover:scale-110 transition-all duration-300 group border border-white/10 hover:border-purple-500/30 cursor-pointer"
+              >
+                <div className="w-full h-full bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl overflow-hidden relative group-hover:from-purple-500/20 group-hover:to-pink-500/20 transition-all">
+                  <img
+                    src={`/assets/sticker${i + 1}.png`}
+                    alt={`Sticker ${i + 1}`}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.src = '/assets/meow-monk-profile.png';
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center">
+            <Link
+              to="/stickers"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full font-black text-xl shadow-2xl hover:shadow-purple-500/50 transition-all transform hover:-translate-y-1 hover:scale-105 border-2 border-white/20"
+            >
+              <Download className="w-6 h-6" />
+              <span>View All Stickers</span>
+              <Rocket className="w-6 h-6" />
+            </Link>
+            <p className="text-sm text-gray-500 mt-4">
+              Download and share with your fellow monks! 🧘‍♂️
+            </p>
           </div>
         </div>
       </section>
