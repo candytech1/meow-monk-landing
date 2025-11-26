@@ -433,13 +433,6 @@ const MeowMonk = () => {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-2 border-purple-500/30 text-purple-400 text-sm font-bold mb-8 animate-fade-in-up hover:scale-105 transition-transform shadow-lg shadow-purple-500/10">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
-              </span>
-              SHARE THE ZEN
-            </div>
             <h2 className="text-5xl md:text-7xl font-bold mb-6 font-['Fredoka'] bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform inline-block">
               Meow Monk Stickers 🐱✨
             </h2>
@@ -577,39 +570,6 @@ const MeowMonk = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      < section className="py-24 px-4 bg-white/5" >
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 font-['Fredoka']">Sacred Scrolls 📚</h2>
-            <p className="text-xl text-gray-400">Questions from fellow monks, answered.</p>
-          </div>
-
-          <div className="space-y-4">
-            <FAQItem
-              question="What is Meow Monk?"
-              answer="Meow Monk is a meme coin on Solana that combines the zen philosophy of meditation with the chaos of crypto trading. It's a community-driven project with no utility except vibes and potential gains."
-            />
-            <FAQItem
-              question="How do I buy $MONK?"
-              answer="You can buy $MONK on Pump.fun using SOL. Simply connect your Phantom or Solflare wallet, swap SOL for $MONK, and join the monastery. Check our 'How to Buy' section above for detailed steps."
-            />
-            <FAQItem
-              question="Is the liquidity safe?"
-              answer="Yes! The liquidity has been burned forever. The LP tokens were sent to a burn address, meaning no one can rug pull. The contract is also renounced, so no one can mint new tokens."
-            />
-            <FAQItem
-              question="What's the tax?"
-              answer="0% buy tax, 0% sell tax. We believe in pure, unadulterated trading. No hidden fees, no surprises. Just you, the market, and your diamond hands."
-            />
-            <FAQItem
-              question="Wen moon?"
-              answer="The moon is not a destination, it's a state of mind. But seriously, with our growing community and strong fundamentals (aka good vibes), we're aiming for the stars. WAGMI."
-            />
-          </div>
-        </div>
-      </section >
-
       {/* Chart Section */}
       <section id="chart" className="py-20 px-4 relative overflow-hidden">
         {/* Background decoration */}
@@ -734,6 +694,39 @@ const MeowMonk = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 px-4 bg-white/5">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 font-['Fredoka']">Sacred Scrolls 📚</h2>
+            <p className="text-xl text-gray-400">Questions from fellow monks, answered.</p>
+          </div>
+
+          <div className="space-y-4">
+            <FAQItem
+              question="What is Meow Monk?"
+              answer="Meow Monk is a meme coin on Solana that combines the zen philosophy of meditation with the chaos of crypto trading. It's a community-driven project with no utility except vibes and potential gains."
+            />
+            <FAQItem
+              question="How do I buy $MONK?"
+              answer="You can buy $MONK on Pump.fun using SOL. Simply connect your Phantom or Solflare wallet, swap SOL for $MONK, and join the monastery. Check our 'How to Buy' section above for detailed steps."
+            />
+            <FAQItem
+              question="Is the liquidity safe?"
+              answer="Yes! The liquidity has been burned forever. The LP tokens were sent to a burn address, meaning no one can rug pull. The contract is also renounced, so no one can mint new tokens."
+            />
+            <FAQItem
+              question="What's the tax?"
+              answer="0% buy tax, 0% sell tax. We believe in pure, unadulterated trading. No hidden fees, no surprises. Just you, the market, and your diamond hands."
+            />
+            <FAQItem
+              question="Wen moon?"
+              answer="The moon is not a destination, it's a state of mind. But seriously, with our growing community and strong fundamentals (aka good vibes), we're aiming for the stars. WAGMI."
+            />
           </div>
         </div>
       </section>
